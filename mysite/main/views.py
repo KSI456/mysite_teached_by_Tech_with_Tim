@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import ToDoList, Item
 from .forms import CreateNewList
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def index(response, id):
@@ -26,10 +27,10 @@ def index(response, id):
     return render(response, "main/view.html", {"ls":ls})
 
 def home(response):
-    return render(response, "main/home.html", {})
+    return render(response, "main/home.html")
 
 
-
+@login_required
 def create(response):
     if response.method == "POST":
         form = CreateNewList(response.POST)
