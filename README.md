@@ -11,10 +11,15 @@ python 설치. pip 설치. cmd에서 pip과 python을 실행시킬 수 있어야
 cmd 창 이용함.
 
 pip venv로 venv 다운로드
+
 python -m venv [원하는 가상환경 이름] 으로 가상환경 생성
+
 [원하는 가상환경 이름]\scripts\activate 를 쳐서 가상환경을 적용
-cmd에서 다운받은 경로에 간 후(window의 경우 cd [경로 붙여넣기]) pip freeze > requirements.text
+
+cmd에서 다운받은 경로에 간 후(window의 경우 cd [경로 붙여넣기]) pip install -r requirements.txt
+
 manage.py 가 있는 경로에 cmd경로를 이동한 후 python manage.py runserver를 입력합니다.
+
 cmd창에서 
 
 System check identified no issues (0 silenced).
